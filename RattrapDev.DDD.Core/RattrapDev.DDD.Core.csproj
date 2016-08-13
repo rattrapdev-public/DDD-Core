@@ -33,6 +33,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Term\DomainTerm.cs" />
     <Compile Include="Term\ValueObject.cs" />
+    <Compile Include="Term\Entity.cs" />
+    <Compile Include="Term\DomainService.cs" />
+    <Compile Include="Term\AggregateRoot.cs" />
+    <Compile Include="Term\DomainEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Term\" />
