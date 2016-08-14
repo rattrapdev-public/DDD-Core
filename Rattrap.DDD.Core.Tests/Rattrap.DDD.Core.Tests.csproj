@@ -31,15 +31,20 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Shouldly">
+      <HintPath>..\packages\Shouldly.2.8.2\lib\net40\Shouldly.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Term\" />
+    <Folder Include="Identifier\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Term\ValueObjectAttributionTests.cs" />
+    <Compile Include="Identifier\GuidIdentifierTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RattrapDev.DDD.Core\RattrapDev.DDD.Core.csproj">
