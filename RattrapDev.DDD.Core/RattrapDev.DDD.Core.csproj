@@ -37,9 +37,14 @@
     <Compile Include="Term\DomainService.cs" />
     <Compile Include="Term\AggregateRoot.cs" />
     <Compile Include="Term\DomainEvent.cs" />
+    <Compile Include="Identifiers\GuidIdentifierBase.cs" />
+    <Compile Include="Identifiers\StringIdentifierBase.cs" />
+    <Compile Include="Identifiers\IntIdentifierBase.cs" />
+    <Compile Include="Identifiers\IdentifierBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Term\" />
+    <Folder Include="Identifiers\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
