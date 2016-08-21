@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Term\ValueObjectAttributionTests.cs" />
     <Compile Include="Identifier\GuidIdentifierTests.cs" />
+    <Compile Include="CompositeSpecificationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RattrapDev.DDD.Core\RattrapDev.DDD.Core.csproj">
