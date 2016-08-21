@@ -1,19 +1,22 @@
-﻿namespace RattrapDev.DDD.Core
+﻿using System;
+using System.Linq.Expressions;
+
+namespace RattrapDev.DDD.Core
 {
 	public class OrNotSpecification<T> : CompositeSpecification<T>
 	{
-		private readonly ICompositeSpecification<T> left;
-		private readonly ICompositeSpecification<T> right;
+		private readonly ILinqSpecification<T> left;
+		private readonly ILinqSpecification<T> right;
 
-		public OrNotSpecification(ICompositeSpecification<T> left, ICompositeSpecification<T> right)
+		public OrNotSpecification(ILinqSpecification<T> left, ILinqSpecification<T> right)
 		{
 			this.right = right;
 			this.left = left;
 		}
 
-		public override bool IsSatisfiedBy(T candidate)
+		public override Expression<Func<T, bool>> AsExpression()
 		{
-			return left.IsSatisfiedBy(candidate) || !right.IsSatisfiedBy(candidate);
+			return ((s) => left.IsSatisfiedBy(s) || !right.IsSatisfiedBy(s));
 		}
 	}
 }

@@ -1,9 +1,7 @@
 ﻿namespace RattrapDev.DDD.Core
 {
-	public abstract class CompositeSpecification<T> : ICompositeSpecification<T>
+	public abstract class CompositeSpecification<T> : LinqSpecification<T>, ICompositeSpecification<T>
 	{
-		public abstract bool IsSatisfiedBy(T candidate);
-
 		public ICompositeSpecification<T> And(ICompositeSpecification<T> other)
 		{
 			return new AndSpecification<T>(this, other);

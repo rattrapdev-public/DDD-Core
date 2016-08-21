@@ -1,17 +1,20 @@
-﻿namespace RattrapDev.DDD.Core
+﻿using System;
+using System.Linq.Expressions;
+
+namespace RattrapDev.DDD.Core
 {
 	public class NotSpecification<T> : CompositeSpecification<T>
 	{
-		private readonly ICompositeSpecification<T> left;
+		private readonly ILinqSpecification<T> left;
 
-		public NotSpecification(ICompositeSpecification<T> left)
+		public NotSpecification(ILinqSpecification<T> left)
 		{
 			this.left = left;
 		}
 
-		public override bool IsSatisfiedBy(T candidate)
+		public override Expression<Func<T, bool>> AsExpression()
 		{
-			return !left.IsSatisfiedBy(candidate);
+			return ((s) => !left.IsSatisfiedBy(s));
 		}
 	}
 }

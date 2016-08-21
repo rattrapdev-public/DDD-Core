@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System;
+using System.Linq.Expressions;
+using NUnit.Framework;
 using RattrapDev.DDD.Core;
 using Shouldly;
 
@@ -73,25 +75,25 @@ namespace Rattrap.DDD.Core.Tests
 
 		private class IsOddNumber : CompositeSpecification<int>
 		{
-			public override bool IsSatisfiedBy(int candidate)
+			public override Expression<Func<int, bool>> AsExpression()
 			{
-				return candidate % 2 == 1;
+				return ((x) => x % 2 == 1);
 			}
 		}
 
 		private class IsEvenNumber : CompositeSpecification<int>
 		{
-			public override bool IsSatisfiedBy(int candidate)
+			public override Expression<Func<int, bool>> AsExpression()
 			{
-				return candidate % 2 == 0;
+				return ((x) => x % 2 == 0);
 			}
 		}
 
 		private class IsDivisibleByThree : CompositeSpecification<int>
 		{
-			public override bool IsSatisfiedBy(int candidate)
+			public override Expression<Func<int, bool>> AsExpression()
 			{
-				return candidate % 3 == 0;
+				return ((x) => x % 3 == 0);
 			}
 		}
 	}

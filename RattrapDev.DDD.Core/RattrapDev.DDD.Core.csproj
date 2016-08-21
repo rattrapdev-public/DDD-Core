@@ -51,6 +51,8 @@
     <Compile Include="AndNotSpecification.cs" />
     <Compile Include="OrNotSpecification.cs" />
     <Compile Include="ISpecification.cs" />
+    <Compile Include="LinqSpecification.cs" />
+    <Compile Include="ILinqSpecification.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Term\" />
