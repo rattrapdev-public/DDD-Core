@@ -1,12 +1,18 @@
 ﻿<Properties StartupItem="RattrapDev.DDD.Core/RattrapDev.DDD.Core.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Rattrap.DDD.Core.Tests/Identifier/GuidIdentifierTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Rattrap.DDD.Core.Tests/LinqSpecificationTests.cs">
     <Files>
-      <File FileName="RattrapDev.DDD.Core/Identifiers/GuidIdentifierBase.cs" Line="15" Column="4" />
-      <File FileName="Rattrap.DDD.Core.Tests/Identifier/GuidIdentifierTests.cs" Line="52" Column="1" />
-      <File FileName="Rattrap.DDD.Core.Tests/Term/ValueObjectAttributionTests.cs" Line="14" Column="19" />
-      <File FileName="RattrapDev.DDD.Core/Identifiers/StringIdentifierBase.cs" Line="1" Column="1" />
-      <File FileName="RattrapDev.DDD.Core/Identifiers/IntIdentifierBase.cs" Line="1" Column="1" />
-      <File FileName="RattrapDev.DDD.Core/Identifiers/IdentifierBase.cs" Line="14" Column="14" />
+      <File FileName="RattrapDev.DDD.Core/CompositeSpecification.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/ICompositeSpecification.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/ISpecification.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/AndSpecification.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/LinqSpecification.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/OrNotSpecification.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/OrSpecification.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/NotSpecification.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/AndNotSpecification.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/ILinqSpecification.cs" Line="1" Column="1" />
+      <File FileName="Rattrap.DDD.Core.Tests/CompositeSpecificationTests.cs" Line="1" Column="1" />
+      <File FileName="Rattrap.DDD.Core.Tests/LinqSpecificationTests.cs" Line="25" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

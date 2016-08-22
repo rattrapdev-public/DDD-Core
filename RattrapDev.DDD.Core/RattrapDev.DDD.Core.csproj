@@ -41,6 +41,18 @@
     <Compile Include="Identifiers\StringIdentifierBase.cs" />
     <Compile Include="Identifiers\IntIdentifierBase.cs" />
     <Compile Include="Identifiers\IdentifierBase.cs" />
+    <Compile Include="IDomainEvent.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="ICompositeSpecification.cs" />
+    <Compile Include="CompositeSpecification.cs" />
+    <Compile Include="AndSpecification.cs" />
+    <Compile Include="OrSpecification.cs" />
+    <Compile Include="NotSpecification.cs" />
+    <Compile Include="AndNotSpecification.cs" />
+    <Compile Include="OrNotSpecification.cs" />
+    <Compile Include="ISpecification.cs" />
+    <Compile Include="LinqSpecification.cs" />
+    <Compile Include="ILinqSpecification.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Term\" />
