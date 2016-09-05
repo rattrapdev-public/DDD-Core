@@ -34,6 +34,9 @@
     <Reference Include="Shouldly">
       <HintPath>..\packages\Shouldly.2.8.2\lib\net40\Shouldly.dll</HintPath>
     </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>..\packages\NSubstitute.1.10.0.0\lib\net45\NSubstitute.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -41,12 +44,14 @@
   <ItemGroup>
     <Folder Include="Term\" />
     <Folder Include="Identifier\" />
+    <Folder Include="Publisher\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Term\ValueObjectAttributionTests.cs" />
     <Compile Include="Identifier\GuidIdentifierTests.cs" />
     <Compile Include="CompositeSpecificationTests.cs" />
     <Compile Include="LinqSpecificationTests.cs" />
+    <Compile Include="Publisher\DomainEventPublisherTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RattrapDev.DDD.Core\RattrapDev.DDD.Core.csproj">
