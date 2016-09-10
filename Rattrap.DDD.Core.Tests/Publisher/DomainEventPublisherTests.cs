@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 using NSubstitute;
 using NUnit.Framework;
 using RattrapDev.DDD.Core;
+using Shouldly;
 
 namespace Rattrap.DDD.Core.Tests
 {
@@ -25,6 +28,47 @@ namespace Rattrap.DDD.Core.Tests
 			subscriber1.DidNotReceiveWithAnyArgs().DoSomething(Arg.Any<SampleDomainEvent>());
 			subscriber2.ReceivedWithAnyArgs().DoSomething(Arg.Any<AnotherSampleDomainEvent>());
 		}
+
+		[Test]
+		public void Publish_only_allows_one_event_at_a_time()
+		{
+			DateTime dateTime1 = DateTime.MinValue;
+			DateTime dateTime2 = DateTime.MinValue;
+			Guid anId = Guid.Empty;
+
+			var publisher = new DomainEventPublisher();
+			var subscriber1 = new Action<SampleDomainEvent>((e) =>
+			{
+				anId = e.Id;
+				dateTime1 = e.OccurredOn;
+			});
+
+			var subscriber2 = new Action<AnotherSampleDomainEvent>((e) =>
+			{
+				Thread.Sleep(100);
+				anId = e.Id;
+				dateTime2 = e.OccurredOn;
+			});
+
+			publisher.Subscribe<SampleDomainEvent>(subscriber1);
+			publisher.Subscribe<AnotherSampleDomainEvent>(subscriber2);
+
+			var domainEvent = new SampleDomainEvent();
+			var anotherDomainEvent = new AnotherSampleDomainEvent();
+
+			Parallel.Invoke(
+				() => publisher.Publish(anotherDomainEvent),
+				() =>
+				{
+					Thread.Sleep(50);
+					publisher.Publish(domainEvent);
+				}
+			);
+
+			anId.ShouldBe(domainEvent.Id);
+			dateTime1.ShouldBe(domainEvent.OccurredOn);
+			dateTime2.ShouldBe(anotherDomainEvent.OccurredOn);
+		}
 	}
 
 	public interface IHandler<TDomainEvent>
@@ -34,22 +78,42 @@ namespace Rattrap.DDD.Core.Tests
 
 	public class SampleDomainEvent : IDomainEvent
 	{
+		Guid id = Guid.NewGuid();
+		DateTime occurredOn = DateTime.UtcNow;
+		public Guid Id
+		{
+			get
+			{
+				return id;
+			}
+		}
+
 		public DateTime OccurredOn
 		{
 			get
 			{
-				return DateTime.UtcNow;
+				return occurredOn;
 			}
 		}
 	}
 
 	public class AnotherSampleDomainEvent : IDomainEvent
 	{
+		Guid id = Guid.NewGuid();
+		DateTime occurredOn = DateTime.UtcNow;
+		public Guid Id
+		{
+			get
+			{
+				return id;
+			}
+		}
+
 		public DateTime OccurredOn
 		{
 			get
 			{
-				return DateTime.UtcNow;
+				return occurredOn;
 			}
 		}
 	}

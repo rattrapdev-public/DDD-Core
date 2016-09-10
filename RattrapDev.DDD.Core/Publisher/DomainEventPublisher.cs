@@ -7,7 +7,9 @@ namespace RattrapDev.DDD.Core
 	{
 		private static DomainEventPublisher instance = new DomainEventPublisher();
 
-		private List<Delegate> subscribers;
+		private static List<Delegate> subscribers;
+
+		private static readonly object _object = new Object();
 
 		public static DomainEventPublisher Instance
 		{
@@ -15,7 +17,7 @@ namespace RattrapDev.DDD.Core
 			{
 				return instance;
 			}
-			set
+			internal set
 			{
 				instance = value;
 			}
@@ -28,12 +30,15 @@ namespace RattrapDev.DDD.Core
 
 		public void Publish<TDomainEvent>(TDomainEvent domainEvent) where TDomainEvent : IDomainEvent
 		{
-			foreach (var subscriber in subscribers)
+			lock(_object)
 			{
-				var parameters = subscriber.Method.GetParameters();
-				if (parameters[0].ParameterType.Equals(typeof(TDomainEvent)))
+				foreach (var subscriber in subscribers)
 				{
-					subscriber.DynamicInvoke(domainEvent);
+					var parameters = subscriber.Method.GetParameters();
+					if (parameters[0].ParameterType.Equals(typeof(TDomainEvent)))
+					{
+						subscriber.DynamicInvoke(domainEvent);
+					}
 				}
 			}
 		}
