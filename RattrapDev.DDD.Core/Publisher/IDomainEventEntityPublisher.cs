@@ -5,4 +5,3 @@
 		void Publish(IPublishableEntity entity);
 	}
 }
-

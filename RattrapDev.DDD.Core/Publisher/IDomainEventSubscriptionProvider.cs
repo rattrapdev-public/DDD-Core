@@ -9,4 +9,3 @@ namespace RattrapDev.DDD.Core.Publish
 		void Subscribe<TDomainEvent>(Action<TDomainEvent> action) where TDomainEvent : IDomainEvent;
 	}
 }
-

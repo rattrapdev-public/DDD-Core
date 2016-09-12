@@ -6,4 +6,3 @@
 		void Publish(IDomainEvent domainEvent);
 	}
 }
-

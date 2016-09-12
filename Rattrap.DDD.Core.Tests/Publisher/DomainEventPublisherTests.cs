@@ -84,4 +84,3 @@ namespace Rattrap.DDD.Core.Tests.Publish
 		void DoSomething(TDomainEvent domainEvent);
 	}
 }
-

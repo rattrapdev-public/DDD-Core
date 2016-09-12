@@ -28,4 +28,3 @@ namespace RattrapDev.DDD.Core.Publish
 		}
 	}
 }
-

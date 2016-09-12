@@ -24,4 +24,3 @@ namespace Rattrap.DDD.Core.Tests.Publish
 		}
 	}
 }
-

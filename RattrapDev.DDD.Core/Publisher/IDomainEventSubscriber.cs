@@ -5,4 +5,3 @@
 		void Handle(TDomainEvent domainEvent);
 	}
 }
-
