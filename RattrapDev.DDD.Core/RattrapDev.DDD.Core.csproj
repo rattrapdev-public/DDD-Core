@@ -56,6 +56,9 @@
     <Compile Include="Publisher\IDomainEventSubscriber.cs" />
     <Compile Include="Publisher\IDomainEventPublisher.cs" />
     <Compile Include="Publisher\DomainEventPublisher.cs" />
+    <Compile Include="Publisher\IDomainEventSubscriptionProvider.cs" />
+    <Compile Include="Publisher\DomainEventSubscriptionProvider.cs" />
+    <Compile Include="Publisher\IDomainEventAggregatePublisher.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Term\" />

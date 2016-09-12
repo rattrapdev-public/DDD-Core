@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using NSubstitute;
@@ -11,6 +12,29 @@ namespace Rattrap.DDD.Core.Tests
 	[TestFixture]
 	public class DomainEventPublisherTests
 	{
+		[Test]
+		public void GetSubscribers_returns_a_list_of_subscribers()
+		{
+			var publisher = new DomainEventPublisher();
+			var subscriber = Substitute.For<IHandler<SampleDomainEvent>>();
+
+			publisher.Subscribe<SampleDomainEvent>(subscriber.DoSomething);
+			var subscribers = publisher.GetSubscribers<SampleDomainEvent>().ToList();
+			subscribers.Count.ShouldBeGreaterThan(0);
+		}
+
+		[Test]
+		public void Reset_cleans_out_subscribers()
+		{
+			var publisher = new DomainEventPublisher();
+			var subscriber = Substitute.For<IHandler<SampleDomainEvent>>();
+
+			publisher.Subscribe<SampleDomainEvent>(subscriber.DoSomething);
+			publisher.Reset();
+			var subscribers = publisher.GetSubscribers<AnotherSampleDomainEvent>().ToList();
+			subscribers.Count.ShouldBe(0);
+		}
+
 		[Test]
 		public void Subscribe_publishes_to_only_matching_subscribers()
 		{
