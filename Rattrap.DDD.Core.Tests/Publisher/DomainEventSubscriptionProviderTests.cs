@@ -32,10 +32,5 @@ namespace Rattrap.DDD.Core.Tests
 			subscriber2.DidNotReceiveWithAnyArgs().DoSomething(Arg.Any<AnotherSampleDomainEvent>());
 		}
 	}
-
-	public interface ISubscriber<TDomainEvent> where TDomainEvent : IDomainEvent
-	{
-		void DoSomething(TDomainEvent domainEvent);
-	}
 }
 

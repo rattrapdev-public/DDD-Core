@@ -7,6 +7,11 @@ namespace RattrapDev.DDD.Core
 
 		public DomainEventEntityPublisher(IDomainEventSubscriptionProvider subscriptionProvider)
 		{
+			if (subscriptionProvider == null)
+			{
+				throw new ArgumentNullException(nameof(subscriptionProvider));
+			}
+
 			this.subscriptionProvider = subscriptionProvider;
 		}
 

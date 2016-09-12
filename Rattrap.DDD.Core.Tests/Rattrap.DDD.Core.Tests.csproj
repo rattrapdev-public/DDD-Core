@@ -55,6 +55,8 @@
     <Compile Include="Publisher\DomainEventSubscriptionProviderTests.cs" />
     <Compile Include="Publisher\SampleDomainEvent.cs" />
     <Compile Include="Publisher\AnotherSampleDomainEvent.cs" />
+    <Compile Include="Publisher\DomainEventEntityPublisherTests.cs" />
+    <Compile Include="Publisher\ISubscriber.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RattrapDev.DDD.Core\RattrapDev.DDD.Core.csproj">
