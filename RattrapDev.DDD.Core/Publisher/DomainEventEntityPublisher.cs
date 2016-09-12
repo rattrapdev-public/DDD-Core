@@ -1,5 +1,5 @@
 ﻿using System;
-namespace RattrapDev.DDD.Core
+namespace RattrapDev.DDD.Core.Publish
 {
 	public class DomainEventEntityPublisher : IDomainEventEntityPublisher
 	{

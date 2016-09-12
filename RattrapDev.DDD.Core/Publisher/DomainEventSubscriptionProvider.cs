@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RattrapDev.DDD.Core
+namespace RattrapDev.DDD.Core.Publish
 {
 	public class DomainEventSubscriptionProvider : IDomainEventSubscriptionProvider
 	{

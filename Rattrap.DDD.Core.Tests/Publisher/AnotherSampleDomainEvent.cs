@@ -1,7 +1,7 @@
 ﻿using System;
 using RattrapDev.DDD.Core;
 
-namespace Rattrap.DDD.Core.Tests
+namespace Rattrap.DDD.Core.Tests.Publish
 {
 	public class AnotherSampleDomainEvent : IDomainEvent
 	{

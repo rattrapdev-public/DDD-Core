@@ -1,4 +1,4 @@
-﻿namespace RattrapDev.DDD.Core
+﻿namespace RattrapDev.DDD.Core.Publish
 {
 	public interface IDomainEventSubscriber<TDomainEvent> where TDomainEvent : IDomainEvent
 	{
