@@ -4,7 +4,6 @@
 	{
 		IDomainEventPublisher Reset();
 		void Publish(IDomainEvent domainEvent);
-
 	}
 }
 
