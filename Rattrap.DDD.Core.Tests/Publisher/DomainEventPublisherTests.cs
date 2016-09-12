@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using NSubstitute;
 using NUnit.Framework;
 using RattrapDev.DDD.Core;
@@ -12,33 +9,33 @@ namespace Rattrap.DDD.Core.Tests
 	[TestFixture]
 	public class DomainEventPublisherTests
 	{
-		[Test]
+		[Test, RequiresThread]
 		public void GetSubscribers_returns_a_list_of_subscribers()
 		{
-			var publisher = new DomainEventPublisher();
+			var publisher = DomainEventPublisher.Instance;
 			var subscriber = Substitute.For<IHandler<SampleDomainEvent>>();
 
 			publisher.Subscribe<SampleDomainEvent>(subscriber.DoSomething);
-			var subscribers = publisher.GetSubscribers<SampleDomainEvent>().ToList();
+			var subscribers = publisher.GetSubscribersFor(typeof(SampleDomainEvent));
 			subscribers.Count.ShouldBeGreaterThan(0);
 		}
 
-		[Test]
+		[Test, RequiresThread]
 		public void Reset_cleans_out_subscribers()
 		{
-			var publisher = new DomainEventPublisher();
+			var publisher = DomainEventPublisher.Instance;
 			var subscriber = Substitute.For<IHandler<SampleDomainEvent>>();
 
 			publisher.Subscribe<SampleDomainEvent>(subscriber.DoSomething);
 			publisher.Reset();
-			var subscribers = publisher.GetSubscribers<AnotherSampleDomainEvent>().ToList();
+			var subscribers = publisher.GetSubscribersFor(typeof(SampleDomainEvent)).ToList();
 			subscribers.Count.ShouldBe(0);
 		}
 
-		[Test]
+		[Test, RequiresThread]
 		public void Subscribe_publishes_to_only_matching_subscribers()
 		{
-			var publisher = new DomainEventPublisher();
+			var publisher = DomainEventPublisher.Instance;
 			var subscriber1 = Substitute.For<IHandler<SampleDomainEvent>>();
 			var subscriber2 = Substitute.For<IHandler<AnotherSampleDomainEvent>>();
 
@@ -53,93 +50,38 @@ namespace Rattrap.DDD.Core.Tests
 			subscriber2.ReceivedWithAnyArgs().DoSomething(Arg.Any<AnotherSampleDomainEvent>());
 		}
 
-		[Test]
-		public void Publish_only_allows_one_event_at_a_time()
+		[Test, RequiresThread]
+		public void Instance_calling_instance_twice_still_publishes_DomainEvents()
 		{
-			DateTime dateTime1 = DateTime.MinValue;
-			DateTime dateTime2 = DateTime.MinValue;
-			Guid anId = Guid.Empty;
+			var publisher = DomainEventPublisher.Instance;
+			var subscriber1 = Substitute.For<IHandler<SampleDomainEvent>>();
+			var subscriber2 = Substitute.For<IHandler<AnotherSampleDomainEvent>>();
 
-			var publisher = new DomainEventPublisher();
-			var subscriber1 = new Action<SampleDomainEvent>((e) =>
-			{
-				anId = e.Id;
-				dateTime1 = e.OccurredOn;
-			});
+			publisher.Subscribe<SampleDomainEvent>(subscriber1.DoSomething);
+			publisher.Subscribe<AnotherSampleDomainEvent>(subscriber2.DoSomething);
 
-			var subscriber2 = new Action<AnotherSampleDomainEvent>((e) =>
-			{
-				Thread.Sleep(100);
-				anId = e.Id;
-				dateTime2 = e.OccurredOn;
-			});
+			var domainEvent = new AnotherSampleDomainEvent();
+			var anotherDomainEvent = new SampleDomainEvent();
 
-			publisher.Subscribe<SampleDomainEvent>(subscriber1);
-			publisher.Subscribe<AnotherSampleDomainEvent>(subscriber2);
+			publisher.Publish(domainEvent);
 
-			var domainEvent = new SampleDomainEvent();
-			var anotherDomainEvent = new AnotherSampleDomainEvent();
+			publisher = DomainEventPublisher.Instance;
+			publisher.Publish(anotherDomainEvent);
 
-			Parallel.Invoke(
-				() => publisher.Publish(anotherDomainEvent),
-				() =>
-				{
-					Thread.Sleep(50);
-					publisher.Publish(domainEvent);
-				}
-			);
+			subscriber1.ReceivedWithAnyArgs().DoSomething(Arg.Any<SampleDomainEvent>());
+			subscriber2.ReceivedWithAnyArgs().DoSomething(Arg.Any<AnotherSampleDomainEvent>());
+		}
 
-			anId.ShouldBe(domainEvent.Id);
-			dateTime1.ShouldBe(domainEvent.OccurredOn);
-			dateTime2.ShouldBe(anotherDomainEvent.OccurredOn);
+		[Test, RequiresThread]
+		public void Publish_without_subscribers_returns()
+		{
+			Should.NotThrow(() => DomainEventPublisher.Instance.Publish(new SampleDomainEvent()));
 		}
 	}
 
 	public interface IHandler<TDomainEvent>
 	{
 		void DoSomething(TDomainEvent domainEvent);
-	}
-
-	public class SampleDomainEvent : IDomainEvent
-	{
-		Guid id = Guid.NewGuid();
-		DateTime occurredOn = DateTime.UtcNow;
-		public Guid Id
-		{
-			get
-			{
-				return id;
-			}
-		}
-
-		public DateTime OccurredOn
-		{
-			get
-			{
-				return occurredOn;
-			}
-		}
-	}
-
-	public class AnotherSampleDomainEvent : IDomainEvent
-	{
-		Guid id = Guid.NewGuid();
-		DateTime occurredOn = DateTime.UtcNow;
-		public Guid Id
-		{
-			get
-			{
-				return id;
-			}
-		}
-
-		public DateTime OccurredOn
-		{
-			get
-			{
-				return occurredOn;
-			}
-		}
 	}
 }
 

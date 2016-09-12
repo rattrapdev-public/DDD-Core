@@ -52,6 +52,9 @@
     <Compile Include="CompositeSpecificationTests.cs" />
     <Compile Include="LinqSpecificationTests.cs" />
     <Compile Include="Publisher\DomainEventPublisherTests.cs" />
+    <Compile Include="Publisher\DomainEventSubscriptionProviderTests.cs" />
+    <Compile Include="Publisher\SampleDomainEvent.cs" />
+    <Compile Include="Publisher\AnotherSampleDomainEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RattrapDev.DDD.Core\RattrapDev.DDD.Core.csproj">

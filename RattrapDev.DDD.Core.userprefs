@@ -1,11 +1,20 @@
 ﻿<Properties StartupItem="RattrapDev.DDD.Core/RattrapDev.DDD.Core.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="RattrapDev.DDD.Core/Publisher/DomainEventPublisher.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RattrapDev.DDD.Core/Publisher/DomainEventEntityPublisher.cs">
     <Files>
-      <File FileName="RattrapDev.DDD.Core/Publisher/DomainEventPublisher.cs" Line="41" Column="7" />
+      <File FileName="Rattrap.DDD.Core.Tests/Publisher/DomainEventPublisherTests.cs" Line="13" Column="40" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/IDomainEventSubscriptionProvider.cs" Line="8" Column="34" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/DomainEventSubscriptionProvider.cs" Line="20" Column="4" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/IDomainEventEntityPublisher.cs" Line="3" Column="46" />
+      <File FileName="RattrapDev.DDD.Core/IPublishableEntity.cs" Line="5" Column="19" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/DomainEventEntityPublisher.cs" Line="20" Column="33" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/IDomainEventPublisher.cs" Line="5" Column="33" NotebookId="1" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/DomainEventPublisher.cs" Line="48" Column="6" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.RattrapDev.DDD.Core PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

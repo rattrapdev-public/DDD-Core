@@ -7,9 +7,8 @@ namespace RattrapDev.DDD.Core
 	{
 		private static DomainEventPublisher instance = null;
 
-		private static List<Delegate> subscribers;
-
-		private static readonly object _object = new Object();
+		[ThreadStatic]
+		private static IDomainEventSubscriptionProvider provider;
 
 		/// <summary>
 		/// Gets or sets an instance of <see cref="DomainEventPublisher"/>.  
@@ -34,43 +33,41 @@ namespace RattrapDev.DDD.Core
 			}
 		}
 
-		public DomainEventPublisher()
+		private DomainEventPublisher() 
 		{
-			subscribers = new List<Delegate>();
 		}
 
-		public void Publish<TDomainEvent>(TDomainEvent domainEvent) where TDomainEvent : IDomainEvent
+		public ICollection<Delegate> GetSubscribersFor(Type domainEventType)
 		{
-			lock(_object)
+			if (provider == null)
 			{
-				foreach (var subscriber in GetSubscribers<TDomainEvent>())
-				{
-					subscriber.DynamicInvoke(domainEvent);
-				}
+				return new List<Delegate>();
+			}
+
+			return provider.GetSubscribersFor(domainEventType);
+		}
+
+		public void Publish(IDomainEvent domainEvent)
+		{
+			foreach (var subscriber in GetSubscribersFor(domainEvent.GetType()))
+			{
+				subscriber.DynamicInvoke(domainEvent);
 			}
 		}
 
 		public IDomainEventPublisher Reset()
 		{
-			subscribers = new List<Delegate>();
+			provider = new DomainEventSubscriptionProvider();
 			return this;
 		}
 
 		public void Subscribe<TDomainEvent>(Action<TDomainEvent> action) where TDomainEvent : IDomainEvent
 		{
-			subscribers.Add(action);
-		}
-
-		public IEnumerable<Action<TDomainEvent>> GetSubscribers<TDomainEvent>() where TDomainEvent : IDomainEvent
-		{
-			foreach (var subscriber in subscribers)
+			if (provider == null)
 			{
-				var parameters = subscriber.Method.GetParameters();
-				if (parameters[0].ParameterType.Equals(typeof(TDomainEvent)))
-				{
-					yield return subscriber as Action<TDomainEvent>;
-				}
+				provider = new DomainEventSubscriptionProvider();
 			}
+			provider.Subscribe(action);
 		}
 	}
 }

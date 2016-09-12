@@ -5,23 +5,28 @@ namespace RattrapDev.DDD.Core
 {
 	public class DomainEventSubscriptionProvider : IDomainEventSubscriptionProvider
 	{
-		private List<Delegate> subscribers = new List<Delegate>();
+		private Dictionary<Type, List<Delegate>> subscribers = new Dictionary<Type, List<Delegate>>();
 
-		public IEnumerable<Action<TDomainEvent>> GetSubscribers<TDomainEvent>() where TDomainEvent : IDomainEvent
+		public ICollection<Delegate> GetSubscribersFor(Type domainEventType)
 		{
-			foreach (var subscriber in subscribers)
+			if (subscribers.ContainsKey(domainEventType))
 			{
-				var parameters = subscriber.Method.GetParameters();
-				if (parameters[0].ParameterType.Equals(typeof(TDomainEvent)))
-				{
-					yield return subscriber as Action<TDomainEvent>;
-				}
+				return subscribers[domainEventType];
 			}
+
+			return new List<Delegate>();
 		}
 
 		public void Subscribe<TDomainEvent>(Action<TDomainEvent> action) where TDomainEvent : IDomainEvent
 		{
-			subscribers.Add(action);
+			if (subscribers.ContainsKey(typeof(TDomainEvent)))
+			{
+				subscribers[typeof(TDomainEvent)].Add(action);
+			}
+			else 
+			{
+				subscribers.Add(typeof(TDomainEvent), new List<Delegate> { action });
+			}
 		}
 	}
 }

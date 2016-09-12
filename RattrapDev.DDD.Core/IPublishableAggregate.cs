@@ -2,8 +2,9 @@
 
 namespace RattrapDev.DDD.Core
 {
-	public interface IPublishableEntity
+	public interface IPublishableEntity<TIdentifier> : IEntity<TIdentifier>
 	{
 		IEnumerable<IDomainEvent> Events { get; }
 	}
 }
+

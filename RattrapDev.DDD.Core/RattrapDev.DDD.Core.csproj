@@ -58,8 +58,9 @@
     <Compile Include="Publisher\DomainEventPublisher.cs" />
     <Compile Include="Publisher\IDomainEventSubscriptionProvider.cs" />
     <Compile Include="Publisher\DomainEventSubscriptionProvider.cs" />
-    <Compile Include="Publisher\IDomainEventAggregatePublisher.cs" />
+    <Compile Include="Publisher\IDomainEventEntityPublisher.cs" />
     <Compile Include="IPublishableEntity.cs" />
+    <Compile Include="Publisher\DomainEventEntityPublisher.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Term\" />

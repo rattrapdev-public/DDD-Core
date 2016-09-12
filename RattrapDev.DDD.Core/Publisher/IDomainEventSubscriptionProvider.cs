@@ -5,7 +5,7 @@ namespace RattrapDev.DDD.Core
 {
 	public interface IDomainEventSubscriptionProvider
 	{
-		IEnumerable<Action<TDomainEvent>> GetSubscribers<TDomainEvent>() where TDomainEvent : IDomainEvent; 
+		ICollection<Delegate> GetSubscribersFor(Type domainEventType);
 		void Subscribe<TDomainEvent>(Action<TDomainEvent> action) where TDomainEvent : IDomainEvent;
 	}
 }
