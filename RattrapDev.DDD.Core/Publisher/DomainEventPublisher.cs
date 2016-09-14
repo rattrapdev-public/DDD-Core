@@ -6,9 +6,9 @@ namespace RattrapDev.DDD.Core.Publish
 	/// <summary>
 	/// Singleton publisher designed to be used within Domain aggregates.   
 	/// </summary>
-	public class DomainEventPublisher : IDomainEventPublisher, IDomainEventSubscriptionProvider
+	public class DomainEventPublisher : IDomainEventPublisher
 	{
-		private static DomainEventPublisher instance = null;
+		private static IDomainEventPublisher instance = null;
 
 		[ThreadStatic]
 		private static IDomainEventSubscriptionProvider provider;
@@ -19,7 +19,7 @@ namespace RattrapDev.DDD.Core.Publish
 		/// Otherwise the internal instance can be set for testing purposes.
 		/// </summary>
 		/// <value>The instance.</value>
-		public static DomainEventPublisher Instance
+		public static IDomainEventPublisher Instance
 		{
 			get
 			{

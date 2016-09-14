@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}|Unit Tests">
-  <MonoDevelop.Ide.Workbench ActiveDocument="RattrapDev.DDD.Core/Publisher/DomainEventSubscriptionProvider.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Rattrap.DDD.Core.Tests/Publisher/DomainEventPublisherTests.cs">
     <Files>
       <File FileName="RattrapDev.DDD.Core/Publisher/DomainEventEntityPublisher.cs" Line="9" Column="50" />
       <File FileName="RattrapDev.DDD.Core/Publisher/IDomainEventSubscriptionProvider.cs" Line="20" Column="38" />
-      <File FileName="RattrapDev.DDD.Core/Publisher/IDomainEventEntityPublisher.cs" Line="13" Column="96" />
-      <File FileName="RattrapDev.DDD.Core/Publisher/IDomainEventPublisher.cs" Line="19" Column="30" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/IDomainEventEntityPublisher.cs" Line="7" Column="107" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/IDomainEventPublisher.cs" Line="6" Column="42" />
       <File FileName="RattrapDev.DDD.Core/Publisher/DomainEventSubscriptionProvider.cs" Line="7" Column="75" />
       <File FileName="RattrapDev.DDD.Core/Publisher/DomainEventPublisher.cs" Line="7" Column="73" />
-      <File FileName="RattrapDev.DDD.Core/IPublishableEntity.cs" Line="6" Column="45" />
+      <File FileName="RattrapDev.DDD.Core/IPublishableEntity.cs" Line="1" Column="1" />
       <File FileName="RattrapDev.DDD.Core/IEntity.cs" Line="1" Column="1" />
+      <File FileName="Rattrap.DDD.Core.Tests/Publisher/DomainEventPublisherTests.cs" Line="16" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

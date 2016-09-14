@@ -5,7 +5,7 @@
 	/// to publish the DomainEvent as soon as it runs. 
 	/// Based, in part, on the design here: http://udidahan.com/2009/06/14/domain-events-salvation/
 	/// </summary>
-	public interface IDomainEventPublisher
+	public interface IDomainEventPublisher : IDomainEventSubscriptionProvider
 	{
 		/// <summary>
 		/// Resets the publisher by reseting the subscribers.

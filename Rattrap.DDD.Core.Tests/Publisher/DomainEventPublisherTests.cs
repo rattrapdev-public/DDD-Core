@@ -9,11 +9,17 @@ namespace Rattrap.DDD.Core.Tests.Publish
 	[TestFixture]
 	public class DomainEventPublisherTests
 	{
+		[SetUp]
+		public void Setup()
+		{
+			DomainEventPublisher.Instance = null;
+		}
+
 		[Test, RequiresThread]
 		public void GetSubscribers_returns_a_list_of_subscribers()
 		{
 			var publisher = DomainEventPublisher.Instance;
-			var subscriber = Substitute.For<IHandler<SampleDomainEvent>>();
+			var subscriber = Substitute.For<ISubscriber<SampleDomainEvent>>();
 
 			publisher.Subscribe<SampleDomainEvent>(subscriber.DoSomething);
 			var subscribers = publisher.GetSubscribersFor(typeof(SampleDomainEvent));
@@ -24,7 +30,7 @@ namespace Rattrap.DDD.Core.Tests.Publish
 		public void Reset_cleans_out_subscribers()
 		{
 			var publisher = DomainEventPublisher.Instance;
-			var subscriber = Substitute.For<IHandler<SampleDomainEvent>>();
+			var subscriber = Substitute.For<ISubscriber<SampleDomainEvent>>();
 
 			publisher.Subscribe<SampleDomainEvent>(subscriber.DoSomething);
 			publisher.Reset();
@@ -36,8 +42,8 @@ namespace Rattrap.DDD.Core.Tests.Publish
 		public void Subscribe_publishes_to_only_matching_subscribers()
 		{
 			var publisher = DomainEventPublisher.Instance;
-			var subscriber1 = Substitute.For<IHandler<SampleDomainEvent>>();
-			var subscriber2 = Substitute.For<IHandler<AnotherSampleDomainEvent>>();
+			var subscriber1 = Substitute.For<ISubscriber<SampleDomainEvent>>();
+			var subscriber2 = Substitute.For<ISubscriber<AnotherSampleDomainEvent>>();
 
 			publisher.Subscribe<SampleDomainEvent>(subscriber1.DoSomething);
 			publisher.Subscribe<AnotherSampleDomainEvent>(subscriber2.DoSomething);
@@ -54,8 +60,8 @@ namespace Rattrap.DDD.Core.Tests.Publish
 		public void Instance_calling_instance_twice_still_publishes_DomainEvents()
 		{
 			var publisher = DomainEventPublisher.Instance;
-			var subscriber1 = Substitute.For<IHandler<SampleDomainEvent>>();
-			var subscriber2 = Substitute.For<IHandler<AnotherSampleDomainEvent>>();
+			var subscriber1 = Substitute.For<ISubscriber<SampleDomainEvent>>();
+			var subscriber2 = Substitute.For<ISubscriber<AnotherSampleDomainEvent>>();
 
 			publisher.Subscribe<SampleDomainEvent>(subscriber1.DoSomething);
 			publisher.Subscribe<AnotherSampleDomainEvent>(subscriber2.DoSomething);
@@ -73,14 +79,18 @@ namespace Rattrap.DDD.Core.Tests.Publish
 		}
 
 		[Test, RequiresThread]
+		public void Instance_can_be_overridden()
+		{
+			var overriddenPublisher = Substitute.For<IDomainEventPublisher>();
+			DomainEventPublisher.Instance = overriddenPublisher;
+			DomainEventPublisher.Instance.Publish(new SampleDomainEvent());
+			DomainEventPublisher.Instance.Received().Publish(Arg.Any<SampleDomainEvent>());
+		}
+
+		[Test, RequiresThread]
 		public void Publish_without_subscribers_returns()
 		{
 			Should.NotThrow(() => DomainEventPublisher.Instance.Publish(new SampleDomainEvent()));
 		}
-	}
-
-	public interface IHandler<TDomainEvent>
-	{
-		void DoSomething(TDomainEvent domainEvent);
 	}
 }
