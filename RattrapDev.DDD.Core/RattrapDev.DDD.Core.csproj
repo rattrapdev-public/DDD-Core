@@ -53,7 +53,6 @@
     <Compile Include="ISpecification.cs" />
     <Compile Include="LinqSpecification.cs" />
     <Compile Include="ILinqSpecification.cs" />
-    <Compile Include="Publisher\IDomainEventSubscriber.cs" />
     <Compile Include="Publisher\IDomainEventPublisher.cs" />
     <Compile Include="Publisher\DomainEventPublisher.cs" />
     <Compile Include="Publisher\IDomainEventSubscriptionProvider.cs" />
