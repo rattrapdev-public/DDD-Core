@@ -2,7 +2,8 @@
 {
 	/// <summary>
 	/// Contract for publishing <see cref="IDomainEvent"/> directly.  Designed
-	/// to publish the DomainEvent as soon as it runs.   
+	/// to publish the DomainEvent as soon as it runs. 
+	/// Based, in part, on the design here: http://udidahan.com/2009/06/14/domain-events-salvation/
 	/// </summary>
 	public interface IDomainEventPublisher
 	{

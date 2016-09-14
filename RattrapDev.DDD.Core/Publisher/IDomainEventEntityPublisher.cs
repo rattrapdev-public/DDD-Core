@@ -4,6 +4,7 @@
 	/// Contract for Domain Event Publisher that
 	/// publishes all Domain Events for a given <see cref="IPublishableEntity"/> 
 	/// instead of individually.
+	/// Based on the idea here: https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/
 	/// </summary>
 	public interface IDomainEventEntityPublisher
 	{
