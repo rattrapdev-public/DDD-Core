@@ -1,6 +1,11 @@
 ﻿using System;
+
 namespace RattrapDev.DDD.Core.Publish
 {
+	/// <summary>
+	/// Implementation of <see cref="IDomainEventEntityPublisher"/>.
+	/// Designed to be used with IoC containers with constructor injection 
+	/// </summary>
 	public class DomainEventEntityPublisher : IDomainEventEntityPublisher
 	{
 		private readonly IDomainEventSubscriptionProvider subscriptionProvider;

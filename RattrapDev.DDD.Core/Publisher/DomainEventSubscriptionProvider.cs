@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace RattrapDev.DDD.Core.Publish
 {
+	/// <summary>
+	/// The implementation of <see cref="IDomainEventSubscriptionProvider"/>.
+	/// </summary>
 	public class DomainEventSubscriptionProvider : IDomainEventSubscriptionProvider
 	{
 		private Dictionary<Type, List<Delegate>> subscribers = new Dictionary<Type, List<Delegate>>();

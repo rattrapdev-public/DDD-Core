@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace RattrapDev.DDD.Core.Publish
 {
+	/// <summary>
+	/// Singleton publisher designed to be used within Domain aggregates.   
+	/// </summary>
 	public class DomainEventPublisher : IDomainEventPublisher, IDomainEventSubscriptionProvider
 	{
 		private static DomainEventPublisher instance = null;
