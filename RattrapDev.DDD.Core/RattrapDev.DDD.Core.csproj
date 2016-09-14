@@ -53,10 +53,18 @@
     <Compile Include="ISpecification.cs" />
     <Compile Include="LinqSpecification.cs" />
     <Compile Include="ILinqSpecification.cs" />
+    <Compile Include="Publisher\IDomainEventPublisher.cs" />
+    <Compile Include="Publisher\DomainEventPublisher.cs" />
+    <Compile Include="Publisher\IDomainEventSubscriptionProvider.cs" />
+    <Compile Include="Publisher\DomainEventSubscriptionProvider.cs" />
+    <Compile Include="Publisher\IDomainEventEntityPublisher.cs" />
+    <Compile Include="IPublishableEntity.cs" />
+    <Compile Include="Publisher\DomainEventEntityPublisher.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Term\" />
     <Folder Include="Identifiers\" />
+    <Folder Include="Publisher\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

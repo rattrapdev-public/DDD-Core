@@ -1,8 +1,8 @@
 ﻿namespace RattrapDev.DDD.Core
 {
-	public interface IEntity<T>
+	public interface IEntity<TIdentifier>
 	{
-		T Identifier { get; }
+		TIdentifier Identifier { get; }
 	}
 }
 
