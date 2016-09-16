@@ -47,16 +47,18 @@
     <Folder Include="Publisher\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Term\ValueObjectAttributionTests.cs" />
+    <Compile Include="Term\ValueObjectClassAttributionTests.cs" />
     <Compile Include="Identifier\GuidIdentifierTests.cs" />
     <Compile Include="CompositeSpecificationTests.cs" />
     <Compile Include="LinqSpecificationTests.cs" />
     <Compile Include="Publisher\DomainEventPublisherTests.cs" />
     <Compile Include="Publisher\DomainEventSubscriptionProviderTests.cs" />
-    <Compile Include="Publisher\SampleDomainEvent.cs" />
-    <Compile Include="Publisher\AnotherSampleDomainEvent.cs" />
     <Compile Include="Publisher\DomainEventEntityPublisherTests.cs" />
     <Compile Include="Publisher\ISubscriber.cs" />
+    <Compile Include="Term\CommandAttributionTests.cs" />
+    <Compile Include="AnotherSampleDomainEvent.cs" />
+    <Compile Include="SampleDomainEvent.cs" />
+    <Compile Include="Term\ValueObjectAttributionTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RattrapDev.DDD.Core\RattrapDev.DDD.Core.csproj">
