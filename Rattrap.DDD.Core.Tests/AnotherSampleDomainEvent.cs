@@ -1,9 +1,9 @@
 ﻿using System;
 using RattrapDev.DDD.Core;
 
-namespace Rattrap.DDD.Core.Tests.Publish
+namespace Rattrap.DDD.Core.Tests
 {
-	public class SampleDomainEvent : IDomainEvent
+	public class AnotherSampleDomainEvent : IDomainEvent
 	{
 		Guid id = Guid.NewGuid();
 		DateTime occurredOn = DateTime.UtcNow;

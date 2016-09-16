@@ -1,6 +1,7 @@
-﻿using System;
+﻿using System.Linq;
 using NUnit.Framework;
-using RattrapDev.DDD.Core.Term;
+using RattrapDev.DDD.Core;
+using Shouldly;
 
 namespace Rattrap.DDD.Core.Tests
 {
@@ -8,18 +9,33 @@ namespace Rattrap.DDD.Core.Tests
 	public class ValueObjectAttributionTests
 	{
 		[Test]
-		public void Attribution_sets_name_and_definition()
+		public void Value_attribution_is_on_properties()
 		{
-			var attributes = typeof(TestValueObject).GetCustomAttributes(true);
-			var valueObjectTerm = (ValueObject)attributes[0];
-			Assert.That(valueObjectTerm.Name, Is.EqualTo("Value"));
-			Assert.That(valueObjectTerm.Definition, Is.EqualTo("Definition"));
+			var properties = typeof(ValueTest).GetProperties();
+			properties.Count(p => p.GetCustomAttributes(true)[0] is ValueObject).ShouldBe(2);
 		}
 
-		[ValueObject("Value", "Definition")]
-		private class TestValueObject 
+		private class ValueTest 
 		{
+			[ValueObject]
+			public object Property1
+			{
+				get;
+				set;
+			}
+
+			public object Property2
+			{
+				get;
+				set;
+			}
+
+			[ValueObject]
+			public object Property3
+			{
+				get;
+				set;
+			}
 		}
 	}
 }
-

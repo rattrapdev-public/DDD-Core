@@ -31,12 +31,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Term\DomainTerm.cs" />
-    <Compile Include="Term\ValueObject.cs" />
-    <Compile Include="Term\Entity.cs" />
-    <Compile Include="Term\DomainService.cs" />
-    <Compile Include="Term\AggregateRoot.cs" />
-    <Compile Include="Term\DomainEvent.cs" />
+    <Compile Include="Term\DomainClass.cs" />
+    <Compile Include="Term\ValueObjectClass.cs" />
+    <Compile Include="Term\EntityClass.cs" />
+    <Compile Include="Term\DomainServiceClass.cs" />
+    <Compile Include="Term\AggregateRootClass.cs" />
+    <Compile Include="Term\DomainEventClass.cs" />
     <Compile Include="Identifiers\GuidIdentifierBase.cs" />
     <Compile Include="Identifiers\StringIdentifierBase.cs" />
     <Compile Include="Identifiers\IntIdentifierBase.cs" />
@@ -60,6 +60,8 @@
     <Compile Include="Publisher\IDomainEventEntityPublisher.cs" />
     <Compile Include="IPublishableEntity.cs" />
     <Compile Include="Publisher\DomainEventEntityPublisher.cs" />
+    <Compile Include="Term\CommandMethod.cs" />
+    <Compile Include="Term\ValueObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Term\" />

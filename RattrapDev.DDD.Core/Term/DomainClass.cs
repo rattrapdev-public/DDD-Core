@@ -2,14 +2,15 @@
 
 namespace RattrapDev.DDD.Core.Term
 {
-	public class DomainTerm : Attribute
+	[AttributeUsage(AttributeTargets.Class)]
+	public class DomainClass : Attribute
 	{
-		internal DomainTerm(string name)
+		internal DomainClass(string name)
 			: this(name, string.Empty) 
 		{ 
 		}
 
-		internal DomainTerm(string name, string definition)
+		internal DomainClass(string name, string definition)
 		{
 			Name = name;
 			Definition = definition;

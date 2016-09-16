@@ -1,11 +1,9 @@
-﻿namespace RattrapDev.DDD.Core.Term
+﻿using System;
+
+namespace RattrapDev.DDD.Core
 {
-	public class ValueObject : DomainTerm
+	[AttributeUsage(AttributeTargets.Property)]
+	public class ValueObject : Attribute
 	{
-		public ValueObject(string name, string definition)
-			: base(name, definition)
-		{
-		}
 	}
 }
-
