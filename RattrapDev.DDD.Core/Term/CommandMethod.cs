@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace RattrapDev.DDD.Core.Term
 {
 	[AttributeUsage(AttributeTargets.Method)]
