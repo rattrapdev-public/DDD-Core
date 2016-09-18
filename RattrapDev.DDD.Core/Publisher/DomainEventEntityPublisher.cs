@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RattrapDev.DDD.Core.Publish
+namespace RattrapDev.DDD.Core.Publisher
 {
 	/// <summary>
 	/// Implementation of <see cref="IDomainEventEntityPublisher"/>.

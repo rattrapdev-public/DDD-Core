@@ -1,6 +1,6 @@
 ﻿using RattrapDev.DDD.Core;
 
-namespace Rattrap.DDD.Core.Tests.Publish
+namespace Rattrap.DDD.Core.Tests.Publisher
 {
 	public interface ISubscriber<TDomainEvent> where TDomainEvent : IDomainEvent
 	{

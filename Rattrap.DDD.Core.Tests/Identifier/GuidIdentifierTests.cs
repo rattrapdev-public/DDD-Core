@@ -3,7 +3,7 @@ using NUnit.Framework;
 using RattrapDev.DDD.Core.Identifier;
 using Shouldly;
 
-namespace Rattrap.DDD.Core.Tests
+namespace Rattrap.DDD.Core.Tests.Identifier
 {
 	[TestFixture]
 	public class GuidIdentifierTests

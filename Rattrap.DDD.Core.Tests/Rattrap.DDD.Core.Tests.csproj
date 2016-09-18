@@ -45,12 +45,11 @@
     <Folder Include="Term\" />
     <Folder Include="Identifier\" />
     <Folder Include="Publisher\" />
+    <Folder Include="Specification\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Term\ValueObjectClassAttributionTests.cs" />
     <Compile Include="Identifier\GuidIdentifierTests.cs" />
-    <Compile Include="CompositeSpecificationTests.cs" />
-    <Compile Include="LinqSpecificationTests.cs" />
     <Compile Include="Publisher\DomainEventPublisherTests.cs" />
     <Compile Include="Publisher\DomainEventSubscriptionProviderTests.cs" />
     <Compile Include="Publisher\DomainEventEntityPublisherTests.cs" />
@@ -59,6 +58,8 @@
     <Compile Include="AnotherSampleDomainEvent.cs" />
     <Compile Include="SampleDomainEvent.cs" />
     <Compile Include="Term\ValueObjectAttributionTests.cs" />
+    <Compile Include="Specification\LinqSpecificationTests.cs" />
+    <Compile Include="Specification\CompositeSpecificationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RattrapDev.DDD.Core\RattrapDev.DDD.Core.csproj">

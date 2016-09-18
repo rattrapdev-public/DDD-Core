@@ -1,5 +1,6 @@
 ﻿using System;
-namespace RattrapDev.DDD.Core
+
+namespace RattrapDev.DDD.Core.Term
 {
 	[AttributeUsage(AttributeTargets.Method)]
 	public class CommandMethod : Attribute

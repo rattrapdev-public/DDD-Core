@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq.Expressions;
 using NUnit.Framework;
-using RattrapDev.DDD.Core;
+using RattrapDev.DDD.Core.Specification;
 using Shouldly;
 
-namespace Rattrap.DDD.Core.Tests
+namespace Rattrap.DDD.Core.Tests.Specification
 {
 	[TestFixture]
 	public class CompositeSpecificationTests
