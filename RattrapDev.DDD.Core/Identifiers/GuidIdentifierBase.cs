@@ -2,6 +2,9 @@
 
 namespace RattrapDev.DDD.Core.Identifier
 {
+	/// <summary>
+	/// Base Guid <see cref="IdentifierBase{Guid}"/> implementation.
+	/// </summary>
 	public abstract class GuidIdentifierBase : IdentifierBase<Guid>
 	{
 		protected GuidIdentifierBase(Guid id)

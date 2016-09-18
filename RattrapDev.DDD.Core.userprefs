@@ -1,13 +1,15 @@
-﻿<Properties StartupConfiguration="{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}|Unit Tests">
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="RattrapDev.DDD.Core/Identifiers/StringIdentifierBase.cs">
+    <Files>
+      <File FileName="RattrapDev.DDD.Core/Identifiers/GuidIdentifierBase.cs" Line="6" Column="65" />
+      <File FileName="RattrapDev.DDD.Core/Identifiers/IdentifierBase.cs" Line="7" Column="75" />
+      <File FileName="RattrapDev.DDD.Core/Identifiers/IntIdentifierBase.cs" Line="4" Column="64" />
+      <File FileName="RattrapDev.DDD.Core/Identifiers/StringIdentifierBase.cs" Line="4" Column="19" />
+    </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="RattrapDev.DDD.Core" expanded="True">
-            <Node name="Rattrap.DDD.Core.Tests" expanded="True">
-              <Node name="Rattrap" selected="True" />
-            </Node>
-          </Node>
+          <Node name="RattrapDev.DDD.Core" expanded="True" />
         </State>
       </Pad>
     </Pads>
@@ -17,5 +19,4 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Rattrap.DDD.Core.Tests PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

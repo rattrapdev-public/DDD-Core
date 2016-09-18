@@ -2,6 +2,10 @@
 
 namespace RattrapDev.DDD.Core.Identifier
 {
+	/// <summary>
+	/// Base type for all implementing identifier classes.  Implements
+	/// <see cref="IEquatable{T}"/> for comparing with other implementations.
+	/// </summary>
 	public abstract class IdentifierBase<T> : IEquatable<IdentifierBase<T>>
 	{
 		private readonly T id;
