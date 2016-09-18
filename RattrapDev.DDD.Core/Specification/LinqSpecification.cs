@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace RattrapDev.DDD.Core
+namespace RattrapDev.DDD.Core.Specification
 {
 	public abstract class LinqSpecification<T> : ILinqSpecification<T>
 	{

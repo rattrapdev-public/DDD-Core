@@ -43,16 +43,6 @@
     <Compile Include="Identifiers\IdentifierBase.cs" />
     <Compile Include="IDomainEvent.cs" />
     <Compile Include="IEntity.cs" />
-    <Compile Include="ICompositeSpecification.cs" />
-    <Compile Include="CompositeSpecification.cs" />
-    <Compile Include="AndSpecification.cs" />
-    <Compile Include="OrSpecification.cs" />
-    <Compile Include="NotSpecification.cs" />
-    <Compile Include="AndNotSpecification.cs" />
-    <Compile Include="OrNotSpecification.cs" />
-    <Compile Include="ISpecification.cs" />
-    <Compile Include="LinqSpecification.cs" />
-    <Compile Include="ILinqSpecification.cs" />
     <Compile Include="Publisher\IDomainEventPublisher.cs" />
     <Compile Include="Publisher\DomainEventPublisher.cs" />
     <Compile Include="Publisher\IDomainEventSubscriptionProvider.cs" />
@@ -62,11 +52,22 @@
     <Compile Include="Publisher\DomainEventEntityPublisher.cs" />
     <Compile Include="Term\CommandMethod.cs" />
     <Compile Include="Term\ValueObject.cs" />
+    <Compile Include="Specification\AndNotSpecification.cs" />
+    <Compile Include="Specification\AndSpecification.cs" />
+    <Compile Include="Specification\CompositeSpecification.cs" />
+    <Compile Include="Specification\ICompositeSpecification.cs" />
+    <Compile Include="Specification\ISpecification.cs" />
+    <Compile Include="Specification\LinqSpecification.cs" />
+    <Compile Include="Specification\NotSpecification.cs" />
+    <Compile Include="Specification\OrNotSpecification.cs" />
+    <Compile Include="Specification\OrSpecification.cs" />
+    <Compile Include="Specification\ILinqSpecification.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Term\" />
     <Folder Include="Identifiers\" />
     <Folder Include="Publisher\" />
+    <Folder Include="Specification\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
