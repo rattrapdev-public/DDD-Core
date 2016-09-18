@@ -1,6 +1,7 @@
 ﻿using System.Linq;
+using System.Reflection;
 using NUnit.Framework;
-using RattrapDev.DDD.Core;
+using RattrapDev.DDD.Core.Term;
 using Shouldly;
 
 namespace Rattrap.DDD.Core.Tests
@@ -11,31 +12,31 @@ namespace Rattrap.DDD.Core.Tests
 		[Test]
 		public void Value_attribution_is_on_properties()
 		{
-			var properties = typeof(ValueTest).GetProperties();
-			properties.Count(p => p.GetCustomAttributes(true)[0] is ValueObject).ShouldBe(2);
+			var property = typeof(ValueTest).GetProperty("Property1");
+			(property.GetCustomAttributes(true)[0] is ValueObject).ShouldBeTrue();
+		}
+	}
+
+	public class ValueTest
+	{
+		[ValueObject]
+		public object Property1
+		{
+			get;
+			set;
 		}
 
-		private class ValueTest 
+		public object Property2
 		{
-			[ValueObject]
-			public object Property1
-			{
-				get;
-				set;
-			}
+			get;
+			set;
+		}
 
-			public object Property2
-			{
-				get;
-				set;
-			}
-
-			[ValueObject]
-			public object Property3
-			{
-				get;
-				set;
-			}
+		[ValueObject]
+		public object Property3
+		{
+			get;
+			set;
 		}
 	}
 }

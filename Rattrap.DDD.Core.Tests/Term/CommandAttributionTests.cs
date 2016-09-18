@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
-using Rattrap.DDD.Core.Tests;
-using RattrapDev.DDD.Core;
+using RattrapDev.DDD.Core.Term;
 using Shouldly;
 
 namespace Rattrap.DDD.Core.Tests

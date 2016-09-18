@@ -1,34 +1,44 @@
 ﻿<Properties StartupConfiguration="{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}|Unit Tests">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Rattrap.DDD.Core.Tests/Specification/LinqSpecificationTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RattrapDev.DDD.Core/Publisher/IDomainEventSubscriptionProvider.cs">
     <Files>
-      <File FileName="RattrapDev.DDD.Core/Term/CommandMethod.cs" Line="1" Column="1" />
-      <File FileName="RattrapDev.DDD.Core/Term/ValueObject.cs" Line="1" Column="1" />
-      <File FileName="RattrapDev.DDD.Core/Term/ValueObjectClass.cs" Line="1" Column="1" />
-      <File FileName="Rattrap.DDD.Core.Tests/Term/ValueObjectClassAttributionTests.cs" Line="1" Column="1" />
-      <File FileName="Rattrap.DDD.Core.Tests/Term/CommandAttributionTests.cs" Line="1" Column="1" />
-      <File FileName="Rattrap.DDD.Core.Tests/SampleDomainEvent.cs" Line="1" Column="1" />
-      <File FileName="Rattrap.DDD.Core.Tests/AnotherSampleDomainEvent.cs" Line="1" Column="1" />
-      <File FileName="Rattrap.DDD.Core.Tests/Publisher/DomainEventEntityPublisherTests.cs" Line="10" Column="2" />
-      <File FileName="Rattrap.DDD.Core.Tests/Publisher/DomainEventPublisherTests.cs" Line="13" Column="22" />
-      <File FileName="Rattrap.DDD.Core.Tests/Term/ValueObjectAttributionTests.cs" Line="1" Column="1" />
-      <File FileName="RattrapDev.DDD.Core/Term/EntityClass.cs" Line="1" Column="1" />
-      <File FileName="RattrapDev.DDD.Core/Term/DomainServiceClass.cs" Line="1" Column="1" />
-      <File FileName="RattrapDev.DDD.Core/Term/DomainEventClass.cs" Line="1" Column="1" />
-      <File FileName="RattrapDev.DDD.Core/Term/DomainClass.cs" Line="1" Column="1" />
-      <File FileName="RattrapDev.DDD.Core/Term/AggregateRootClass.cs" Line="1" Column="1" />
-      <File FileName="RattrapDev.DDD.Core/Specification/AndNotSpecification.cs" Line="4" Column="44" />
-      <File FileName="RattrapDev.DDD.Core/Specification/AndSpecification.cs" Line="4" Column="44" />
-      <File FileName="RattrapDev.DDD.Core/Specification/CompositeSpecification.cs" Line="1" Column="44" />
-      <File FileName="RattrapDev.DDD.Core/Specification/ICompositeSpecification.cs" Line="1" Column="44" />
-      <File FileName="RattrapDev.DDD.Core/Specification/ISpecification.cs" Line="1" Column="44" />
-      <File FileName="RattrapDev.DDD.Core/Specification/LinqSpecification.cs" Line="6" Column="52" />
-      <File FileName="RattrapDev.DDD.Core/Specification/NotSpecification.cs" Line="4" Column="44" />
-      <File FileName="RattrapDev.DDD.Core/Specification/OrNotSpecification.cs" Line="4" Column="44" />
-      <File FileName="RattrapDev.DDD.Core/Specification/OrSpecification.cs" Line="4" Column="44" />
-      <File FileName="RattrapDev.DDD.Core/Specification/ILinqSpecification.cs" Line="4" Column="44" />
-      <File FileName="Rattrap.DDD.Core.Tests/Specification/CompositeSpecificationTests.cs" Line="7" Column="47" />
-      <File FileName="Rattrap.DDD.Core.Tests/Specification/LinqSpecificationTests.cs" Line="8" Column="47" />
+      <File FileName="Rattrap.DDD.Core.Tests/Term/CommandAttributionTests.cs" Line="1" Column="23" />
+      <File FileName="Rattrap.DDD.Core.Tests/Term/ValueObjectAttributionTests.cs" Line="17" Column="1" />
+      <File FileName="Rattrap.DDD.Core.Tests/Identifier/GuidIdentifierTests.cs" Line="6" Column="44" />
+      <File FileName="Rattrap.DDD.Core.Tests/Publisher/DomainEventEntityPublisherTests.cs" Line="9" Column="43" />
+      <File FileName="Rattrap.DDD.Core.Tests/Publisher/DomainEventPublisherTests.cs" Line="7" Column="43" />
+      <File FileName="Rattrap.DDD.Core.Tests/Publisher/DomainEventSubscriptionProviderTests.cs" Line="5" Column="43" />
+      <File FileName="Rattrap.DDD.Core.Tests/Publisher/ISubscriber.cs" Line="3" Column="43" />
+      <File FileName="Rattrap.DDD.Core.Tests/Specification/CompositeSpecificationTests.cs" Line="4" Column="40" />
+      <File FileName="RattrapDev.DDD.Core/Identifiers/GuidIdentifierBase.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Identifiers/IdentifierBase.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Identifiers/IntIdentifierBase.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Identifiers/StringIdentifierBase.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/DomainEventEntityPublisher.cs" Line="3" Column="40" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/DomainEventPublisher.cs" Line="4" Column="40" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/DomainEventSubscriptionProvider.cs" Line="4" Column="40" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/IDomainEventEntityPublisher.cs" Line="1" Column="40" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/IDomainEventPublisher.cs" Line="1" Column="40" />
+      <File FileName="RattrapDev.DDD.Core/Publisher/IDomainEventSubscriptionProvider.cs" Line="4" Column="40" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="RattrapDev.DDD.Core" expanded="True">
+            <Node name="Rattrap.DDD.Core.Tests" expanded="True">
+              <Node name="Rattrap" expanded="True">
+                <Node name="DDD" expanded="True">
+                  <Node name="Core" expanded="True">
+                    <Node name="Tests" expanded="True">
+                      <Node name="ValueObjectAttributionTests" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

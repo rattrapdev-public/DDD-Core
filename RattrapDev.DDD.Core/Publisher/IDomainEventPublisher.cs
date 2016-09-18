@@ -1,4 +1,4 @@
-﻿namespace RattrapDev.DDD.Core.Publish
+﻿namespace RattrapDev.DDD.Core.Publisher
 {
 	/// <summary>
 	/// Contract for publishing <see cref="IDomainEvent"/> directly.  Designed

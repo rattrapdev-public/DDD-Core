@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RattrapDev.DDD.Core.Publish
+namespace RattrapDev.DDD.Core.Publisher
 {
 	/// <summary>
 	/// Contract for subscription provider.  Keeps a collection
