@@ -2,6 +2,9 @@
 
 namespace RattrapDev.DDD.Core.Term
 {
+	/// <summary>
+	/// Attribute for Command Methods within an DDD Entity
+	/// </summary>
 	[AttributeUsage(AttributeTargets.Method)]
 	public class CommandMethod : Attribute
 	{
