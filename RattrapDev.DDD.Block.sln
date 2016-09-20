@@ -1,9 +1,9 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RattrapDev.DDD.Core", "RattrapDev.DDD.Core\RattrapDev.DDD.Core.csproj", "{547177DB-D61F-43FC-8860-22DC9B59ACA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RattrapDev.DDD.Block", "RattrapDev.DDD.Core\RattrapDev.DDD.Block.csproj", "{547177DB-D61F-43FC-8860-22DC9B59ACA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rattrap.DDD.Core.Tests", "Rattrap.DDD.Core.Tests\Rattrap.DDD.Core.Tests.csproj", "{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rattrap.DDD.Block.Tests", "Rattrap.DDD.Core.Tests\Rattrap.DDD.Block.Tests.csproj", "{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,8 +1,8 @@
-﻿using NUnit.Framework;
-using RattrapDev.DDD.Core.Term;
+using NUnit.Framework;
+using RattrapDev.DDD.Block.Term;
 using Shouldly;
 
-namespace Rattrap.DDD.Core.Tests
+namespace Rattrap.DDD.Block.Tests
 {
 	[TestFixture]
 	public class CommandAttributionTests

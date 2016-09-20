@@ -1,4 +1,4 @@
-﻿namespace RattrapDev.DDD.Core.Specification
+namespace RattrapDev.DDD.Block.Specification
 {
 	/// <summary>
 	/// Specification pattern for doing validation.  

@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}|Unit Tests">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RattrapDev.DDD.Core/IPublishableEntity.cs">
+    <Files>
+      <File FileName="RattrapDev.DDD.Core/Identifiers/GuidIdentifierBase.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Identifiers/IdentifierBase.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Identifiers/IntIdentifierBase.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Identifiers/StringIdentifierBase.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Specification/ICompositeSpecification.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Term/AggregateRootClass.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Term/CommandMethod.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Term/BaseDomainClass.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Term/EntityClass.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Term/DomainEventClass.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Term/DomainServiceClass.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Term/ValueObject.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/Term/ValueObjectClass.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/IDomainEvent.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/IEntity.cs" Line="1" Column="1" />
+      <File FileName="RattrapDev.DDD.Core/IPublishableEntity.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Rattrap.DDD.Block.Tests PreferredExecutionTarget="MonoDevelop.Default" />
+  <AuthorInfo Name="Matthew Winger" Email="mateo6379@gmail.com" Copyright="" Company="" Trademark="" />
+</Properties>

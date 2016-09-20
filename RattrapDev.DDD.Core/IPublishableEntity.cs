@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
-namespace RattrapDev.DDD.Core
+namespace RattrapDev.DDD.Block
 {
 	/// <summary>
 	/// An entity that will fire domain events.

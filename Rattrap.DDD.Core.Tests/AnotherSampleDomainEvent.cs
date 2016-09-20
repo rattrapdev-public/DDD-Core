@@ -1,7 +1,7 @@
-﻿using System;
-using RattrapDev.DDD.Core;
+using System;
+using RattrapDev.DDD.Block;
 
-namespace Rattrap.DDD.Core.Tests
+namespace Rattrap.DDD.Block.Tests
 {
 	public class AnotherSampleDomainEvent : IDomainEvent
 	{

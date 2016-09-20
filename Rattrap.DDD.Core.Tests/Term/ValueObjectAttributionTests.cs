@@ -1,10 +1,10 @@
-﻿using System.Linq;
+using System.Linq;
 using System.Reflection;
 using NUnit.Framework;
-using RattrapDev.DDD.Core.Term;
+using RattrapDev.DDD.Block.Term;
 using Shouldly;
 
-namespace Rattrap.DDD.Core.Tests
+namespace Rattrap.DDD.Block.Tests
 {
 	[TestFixture]
 	public class ValueObjectAttributionTests

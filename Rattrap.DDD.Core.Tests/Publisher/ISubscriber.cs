@@ -1,6 +1,6 @@
-﻿using RattrapDev.DDD.Core;
+using RattrapDev.DDD.Block;
 
-namespace Rattrap.DDD.Core.Tests.Publisher
+namespace Rattrap.DDD.Block.Tests.Publisher
 {
 	public interface ISubscriber<TDomainEvent> where TDomainEvent : IDomainEvent
 	{

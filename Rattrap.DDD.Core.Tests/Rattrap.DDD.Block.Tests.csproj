@@ -64,7 +64,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RattrapDev.DDD.Core\RattrapDev.DDD.Core.csproj">
       <Project>{547177DB-D61F-43FC-8860-22DC9B59ACA3}</Project>
-      <Name>RattrapDev.DDD.Core</Name>
+      <Name>RattrapDev.DDD.Block</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

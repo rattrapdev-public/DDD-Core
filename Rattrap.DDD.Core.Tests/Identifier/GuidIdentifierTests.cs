@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using NUnit.Framework;
-using RattrapDev.DDD.Core.Identifier;
+using RattrapDev.DDD.Block.Identifier;
 using Shouldly;
 
-namespace Rattrap.DDD.Core.Tests.Identifier
+namespace Rattrap.DDD.Block.Tests.Identifier
 {
 	[TestFixture]
 	public class GuidIdentifierTests

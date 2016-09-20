@@ -1,8 +1,8 @@
-﻿using NSubstitute;
+using NSubstitute;
 using NUnit.Framework;
-using RattrapDev.DDD.Core.Publisher;
+using RattrapDev.DDD.Block.Publisher;
 
-namespace Rattrap.DDD.Core.Tests.Publisher
+namespace Rattrap.DDD.Block.Tests.Publisher
 {
 	[TestFixture]
 	public class DomainEventSubscriptionProviderTests

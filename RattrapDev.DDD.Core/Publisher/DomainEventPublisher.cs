@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
-namespace RattrapDev.DDD.Core.Publisher
+namespace RattrapDev.DDD.Block.Publisher
 {
 	/// <summary>
 	/// Singleton publisher designed to be used within Domain aggregates.   

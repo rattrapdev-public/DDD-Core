@@ -1,4 +1,4 @@
-﻿namespace RattrapDev.DDD.Core.Specification
+namespace RattrapDev.DDD.Block.Specification
 {
 	/// <summary>
 	/// Base contract for the Composite Specification.  Implements the Linq

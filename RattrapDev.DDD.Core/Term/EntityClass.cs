@@ -1,4 +1,4 @@
-﻿namespace RattrapDev.DDD.Core.Term
+namespace RattrapDev.DDD.Block.Term
 {
 	/// <summary>
 	/// Attribute for Entity DDD classes.  

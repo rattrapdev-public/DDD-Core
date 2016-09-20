@@ -1,4 +1,4 @@
-﻿namespace RattrapDev.DDD.Core.Publisher
+namespace RattrapDev.DDD.Block.Publisher
 {
 	/// <summary>
 	/// Contract for Domain Event Publisher that

@@ -1,4 +1,4 @@
-﻿namespace RattrapDev.DDD.Core.Identifier
+namespace RattrapDev.DDD.Block.Identifier
 {
 	/// <summary>
 	/// Base int <see cref="IdentifierBase{int}"/> implementation. 

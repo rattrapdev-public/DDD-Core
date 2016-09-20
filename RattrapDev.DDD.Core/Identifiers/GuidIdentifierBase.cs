@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace RattrapDev.DDD.Core.Identifier
+namespace RattrapDev.DDD.Block.Identifier
 {
 	/// <summary>
 	/// Base Guid <see cref="IdentifierBase{Guid}"/> implementation.

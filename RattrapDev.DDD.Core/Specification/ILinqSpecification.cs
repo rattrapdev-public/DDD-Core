@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Linq.Expressions;
 
-namespace RattrapDev.DDD.Core.Specification
+namespace RattrapDev.DDD.Block.Specification
 {
 	/// <summary>
 	/// Base contract for doing LINQ based specifications.  Note the default implementation

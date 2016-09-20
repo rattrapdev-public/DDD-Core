@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace RattrapDev.DDD.Core.Identifier
+namespace RattrapDev.DDD.Block.Identifier
 {
 	/// <summary>
 	/// Base type for all implementing identifier classes.  Implements

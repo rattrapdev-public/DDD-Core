@@ -1,4 +1,4 @@
-﻿namespace RattrapDev.DDD.Core.Specification
+namespace RattrapDev.DDD.Block.Specification
 {
 	public abstract class CompositeSpecification<T> : LinqSpecification<T>, ICompositeSpecification<T>
 	{

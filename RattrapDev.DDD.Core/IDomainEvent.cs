@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace RattrapDev.DDD.Core
+namespace RattrapDev.DDD.Block
 {
 	/// <summary>
 	/// Base contract for DDD Domain Events.  

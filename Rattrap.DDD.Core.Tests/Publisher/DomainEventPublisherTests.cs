@@ -1,10 +1,10 @@
-﻿using System.Linq;
+using System.Linq;
 using NSubstitute;
 using NUnit.Framework;
-using RattrapDev.DDD.Core.Publisher;
+using RattrapDev.DDD.Block.Publisher;
 using Shouldly;
 
-namespace Rattrap.DDD.Core.Tests.Publisher
+namespace Rattrap.DDD.Block.Tests.Publisher
 {
 	[TestFixture]
 	public class DomainEventPublisherTests

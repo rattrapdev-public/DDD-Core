@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace RattrapDev.DDD.Core.Term
+namespace RattrapDev.DDD.Block.Term
 {
 	/// <summary>
 	/// Base domain class used by other implementations.
