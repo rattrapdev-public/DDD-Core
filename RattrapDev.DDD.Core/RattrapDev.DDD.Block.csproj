@@ -37,10 +37,10 @@
     <Compile Include="Term\DomainServiceClass.cs" />
     <Compile Include="Term\AggregateRootClass.cs" />
     <Compile Include="Term\DomainEventClass.cs" />
-    <Compile Include="Identifiers\GuidIdentifierBase.cs" />
-    <Compile Include="Identifiers\StringIdentifierBase.cs" />
-    <Compile Include="Identifiers\IntIdentifierBase.cs" />
-    <Compile Include="Identifiers\IdentifierBase.cs" />
+    <Compile Include="Identifier\GuidIdentifierBase.cs" />
+    <Compile Include="Identifier\StringIdentifierBase.cs" />
+    <Compile Include="Identifier\IntIdentifierBase.cs" />
+    <Compile Include="Identifier\IdentifierBase.cs" />
     <Compile Include="IDomainEvent.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="Publisher\IDomainEventPublisher.cs" />
@@ -65,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Term\" />
-    <Folder Include="Identifiers\" />
+    <Folder Include="Identifier\" />
     <Folder Include="Publisher\" />
     <Folder Include="Specification\" />
   </ItemGroup>

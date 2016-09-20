@@ -1,7 +1,7 @@
 using System;
 using RattrapDev.DDD.Block;
 
-namespace Rattrap.DDD.Block.Tests
+namespace RattrapDev.DDD.Block.Tests
 {
 	public class SampleDomainEvent : IDomainEvent
 	{

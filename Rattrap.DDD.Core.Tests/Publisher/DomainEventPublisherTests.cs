@@ -4,7 +4,7 @@ using NUnit.Framework;
 using RattrapDev.DDD.Block.Publisher;
 using Shouldly;
 
-namespace Rattrap.DDD.Block.Tests.Publisher
+namespace RattrapDev.DDD.Block.Tests.Publisher
 {
 	[TestFixture]
 	public class DomainEventPublisherTests

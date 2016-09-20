@@ -4,7 +4,7 @@ using NUnit.Framework;
 using RattrapDev.DDD.Block.Specification;
 using Shouldly;
 
-namespace Rattrap.DDD.Block.Tests.Specification
+namespace RattrapDev.DDD.Block.Tests.Specification
 {
 	[TestFixture]
 	public class CompositeSpecificationTests
