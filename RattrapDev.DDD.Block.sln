@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RattrapDev.DDD.Block", "RattrapDev.DDD.Block\RattrapDev.DDD.Block.csproj", "{547177DB-D61F-43FC-8860-22DC9B59ACA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RattrapDev.DDD.Block.Tests", "RattrapDev.DDD.Block.Tests\RattrapDev.DDD.Block.Tests.csproj", "{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{547177DB-D61F-43FC-8860-22DC9B59ACA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{547177DB-D61F-43FC-8860-22DC9B59ACA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{547177DB-D61F-43FC-8860-22DC9B59ACA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{547177DB-D61F-43FC-8860-22DC9B59ACA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
