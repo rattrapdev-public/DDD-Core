@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Rattrap.DDD.Core.Tests</RootNamespace>
+    <RootNamespace>Rattrap.DDD.Block.Tests</RootNamespace>
     <AssemblyName>Rattrap.DDD.Core.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
@@ -62,7 +62,7 @@
     <Compile Include="Specification\CompositeSpecificationTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RattrapDev.DDD.Core\RattrapDev.DDD.Block.csproj">
+    <ProjectReference Include="..\RattrapDev.DDD.Block\RattrapDev.DDD.Block.csproj">
       <Project>{547177DB-D61F-43FC-8860-22DC9B59ACA3}</Project>
       <Name>RattrapDev.DDD.Block</Name>
     </ProjectReference>
