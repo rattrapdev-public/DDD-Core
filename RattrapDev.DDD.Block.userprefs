@@ -1,26 +1,11 @@
-﻿<Properties StartupConfiguration="{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}|Unit Tests">
+﻿<Properties StartupConfiguration="{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}|Unit Tests" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench ActiveDocument="RattrapDev.DDD.Block/Properties/AssemblyInfo.cs">
     <Files>
       <File FileName="RattrapDev.DDD.Block.Tests/Term/ValueObjectClassAttributionTests.cs" Line="2" Column="28" />
-      <File FileName="RattrapDev.DDD.Block/Properties/AssemblyInfo.cs" Line="9" Column="45" />
+      <File FileName="RattrapDev.DDD.Block/Properties/AssemblyInfo.cs" Line="15" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="RattrapDev.DDD.Block" expanded="True">
-            <Node name="RattrapDev.DDD.Block" expanded="True" selected="True">
-              <Node name="Properties" expanded="True" />
-            </Node>
-            <Node name="RattrapDev.DDD.Block.Tests" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Term" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

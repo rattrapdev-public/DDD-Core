@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>RattrapDev.DDD.Block</id>
+    <version>0.0.1-alpha1</version>
+    <title>Domain Block .net</title>
+    <authors>Matt Winger</authors>
+    <owners>Matt Winger</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/rattrapdev-public/Domain-Block-.net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A basic library providing DDD tactical tools for .net.</description>
+    <releaseNotes>Initial release includes DDD type attributes, singleton and instance Domain Event publishers, and LINQ compatible specification implementation.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+  </metadata>
+	<files>
+    	<file src="bin/Debug/RattrapDev.DDD.Block.dll" target="lib/net40/" />
+  	</files>
+</package>
