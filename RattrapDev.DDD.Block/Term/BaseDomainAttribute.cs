@@ -6,14 +6,14 @@ namespace RattrapDev.DDD.Block.Term
 	/// Base domain class used by other implementations.
 	/// </summary>
 	[AttributeUsage(AttributeTargets.Class)]
-	public abstract class BaseDomainClass : Attribute
+	public abstract class BaseDomainAttribute : Attribute
 	{
-		internal BaseDomainClass(string name)
+		internal BaseDomainAttribute(string name)
 			: this(name, string.Empty) 
 		{ 
 		}
 
-		internal BaseDomainClass(string name, string definition)
+		internal BaseDomainAttribute(string name, string definition)
 		{
 			Name = name;
 			Definition = definition;

@@ -3,9 +3,9 @@ namespace RattrapDev.DDD.Block.Term
 	/// <summary>
 	/// Attribute for Aggregate Root DDD classes.
 	/// </summary>
-	public class AggregateRootClass : EntityClass
+	public class AggregateRoot : Entity
 	{
-		public AggregateRootClass(string name, string definition)
+		public AggregateRoot(string name, string definition)
 			: base(name, definition)
 		{
 		}

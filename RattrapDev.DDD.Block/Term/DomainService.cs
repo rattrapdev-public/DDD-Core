@@ -3,9 +3,9 @@ namespace RattrapDev.DDD.Block.Term
 	/// <summary>
 	/// Attribute for DDD Domain Service classes.
 	/// </summary>
-	public class DomainServiceClass : BaseDomainClass
+	public class DomainService : BaseDomainAttribute
 	{
-		public DomainServiceClass(string name, string definition)
+		public DomainService(string name, string definition)
 			: base(name, definition)
 		{
 		}

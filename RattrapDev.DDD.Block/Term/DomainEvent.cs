@@ -3,9 +3,9 @@ namespace RattrapDev.DDD.Block.Term
 	/// <summary>
 	/// Attribute for DDD Domain Event classes.
 	/// </summary>
-	public class DomainEventClass : BaseDomainClass
+	public class DomainEvent : BaseDomainAttribute
 	{
-		public DomainEventClass(string name, string definition)
+		public DomainEvent(string name, string definition)
 			: base(name, definition)
 		{
 		}

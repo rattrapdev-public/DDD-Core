@@ -57,7 +57,6 @@
     <Compile Include="Term\CommandAttributionTests.cs" />
     <Compile Include="AnotherSampleDomainEvent.cs" />
     <Compile Include="SampleDomainEvent.cs" />
-    <Compile Include="Term\ValueObjectAttributionTests.cs" />
     <Compile Include="Specification\LinqSpecificationTests.cs" />
     <Compile Include="Specification\CompositeSpecificationTests.cs" />
   </ItemGroup>

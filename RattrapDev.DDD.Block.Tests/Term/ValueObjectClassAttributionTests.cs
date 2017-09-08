@@ -10,12 +10,12 @@ namespace RattrapDev.DDD.Block.Tests
 		public void Attribution_sets_name_and_definition()
 		{
 			var attributes = typeof(TestValueObject).GetCustomAttributes(true);
-			var valueObjectTerm = (ValueObjectClass)attributes[0];
+			var valueObjectTerm = (ValueObject)attributes[0];
 			Assert.That(valueObjectTerm.Name, Is.EqualTo("Value"));
 			Assert.That(valueObjectTerm.Definition, Is.EqualTo("Definition"));
 		}
 
-		[ValueObjectClass("Value", "Definition")]
+		[ValueObject("Value", "Definition")]
 		private class TestValueObject 
 		{
 		}

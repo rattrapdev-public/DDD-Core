@@ -1,12 +1,14 @@
-using System;
-
 namespace RattrapDev.DDD.Block.Term
 {
 	/// <summary>
-	/// Attribute for Value Object implementations within a class.
+	/// Attribute for DDD Value Object classes.
 	/// </summary>
-	[AttributeUsage(AttributeTargets.Property)]
-	public class ValueObject : Attribute
+	public class ValueObject : BaseDomainAttribute
 	{
+		public ValueObject(string name, string definition)
+			: base(name, definition)
+		{
+		}
 	}
 }
+
