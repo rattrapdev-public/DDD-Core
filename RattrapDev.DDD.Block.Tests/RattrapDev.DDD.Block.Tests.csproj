@@ -44,17 +44,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="Term\ValueObjectClassAttributionTests.cs" />
-    <Compile Include="Identifier\GuidIdentifierTests.cs" />
-    <Compile Include="Publisher\DomainEventPublisherTests.cs" />
-    <Compile Include="Publisher\DomainEventSubscriptionProviderTests.cs" />
-    <Compile Include="Publisher\DomainEventEntityPublisherTests.cs" />
-    <Compile Include="Publisher\ISubscriber.cs" />
-    <Compile Include="Term\CommandAttributionTests.cs" />
     <Compile Include="AnotherSampleDomainEvent.cs" />
     <Compile Include="SampleDomainEvent.cs" />
-    <Compile Include="Specification\LinqSpecificationTests.cs" />
-    <Compile Include="Specification\CompositeSpecificationTests.cs" />
+    <Compile Include="Term\ValueObjectClassAttributionTests.cs" />
+    <Compile Include="Term\CommandAttributionTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RattrapDev.DDD.Block\RattrapDev.DDD.Block.csproj">

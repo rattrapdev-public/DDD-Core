@@ -38,30 +38,7 @@
     <Compile Include="Term\DomainService.cs" />
     <Compile Include="Term\AggregateRoot.cs" />
     <Compile Include="Term\DomainEvent.cs" />
-    <Compile Include="Identifier\GuidIdentifierBase.cs" />
-    <Compile Include="Identifier\StringIdentifierBase.cs" />
-    <Compile Include="Identifier\IntIdentifierBase.cs" />
-    <Compile Include="Identifier\IdentifierBase.cs" />
-    <Compile Include="IDomainEvent.cs" />
-    <Compile Include="IEntity.cs" />
-    <Compile Include="Publisher\IDomainEventPublisher.cs" />
-    <Compile Include="Publisher\DomainEventPublisher.cs" />
-    <Compile Include="Publisher\IDomainEventSubscriptionProvider.cs" />
-    <Compile Include="Publisher\DomainEventSubscriptionProvider.cs" />
-    <Compile Include="Publisher\IDomainEventEntityPublisher.cs" />
-    <Compile Include="IPublishableEntity.cs" />
-    <Compile Include="Publisher\DomainEventEntityPublisher.cs" />
     <Compile Include="Term\CommandMethod.cs" />
-    <Compile Include="Specification\AndNotSpecification.cs" />
-    <Compile Include="Specification\AndSpecification.cs" />
-    <Compile Include="Specification\CompositeSpecification.cs" />
-    <Compile Include="Specification\ICompositeSpecification.cs" />
-    <Compile Include="Specification\ISpecification.cs" />
-    <Compile Include="Specification\LinqSpecification.cs" />
-    <Compile Include="Specification\NotSpecification.cs" />
-    <Compile Include="Specification\OrNotSpecification.cs" />
-    <Compile Include="Specification\OrSpecification.cs" />
-    <Compile Include="Specification\ILinqSpecification.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
