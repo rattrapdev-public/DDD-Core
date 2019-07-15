@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle("Domain Block .net")]
-[assembly: AssemblyDescription("A basic library providing DDD tactical tools for .net.")]
+[assembly: AssemblyDescription("A library to provide attributes on domain types for build Domain Driven Design glossaries")]
 [assembly: AssemblyCopyright("Matt Winger")]
 
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
