@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using RattrapDev.DDD.Block.Term;
+using RattrapDev.Scribe.Term;
 
-namespace RattrapDev.DDD.Block.Tests
+namespace RattrapDev.Scribe.Tests
 {
 	[TestFixture]
 	public class ValueObjectClassAttributionTests

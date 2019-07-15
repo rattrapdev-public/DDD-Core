@@ -1,4 +1,4 @@
-namespace RattrapDev.DDD.Block.Term
+namespace RattrapDev.Scribe.Term
 {
 	/// <summary>
 	/// Attribute for DDD Domain Event classes.

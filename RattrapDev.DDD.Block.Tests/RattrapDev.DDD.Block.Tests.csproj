@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{84D3C70E-4D44-4D13-98E7-0F93A943D5C8}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Rattrap.DDD.Block.Tests</RootNamespace>
-    <AssemblyName>Rattrap.DDD.Core.Tests</AssemblyName>
+    <RootNamespace>Rattrap.Scribe.Tests</RootNamespace>
+    <AssemblyName>Rattrap.Scribe.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>

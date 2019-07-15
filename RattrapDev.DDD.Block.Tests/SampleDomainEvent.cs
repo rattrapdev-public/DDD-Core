@@ -1,6 +1,6 @@
 using System;
 
-namespace RattrapDev.DDD.Block.Tests
+namespace RattrapDev.Scribe.Tests
 {
 	public class SampleDomainEvent
 	{
